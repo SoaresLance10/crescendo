@@ -1,0 +1,114 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+
+            <form action="{% url 'register' event_id=event_id %}" method="post" class="sign-in-form">
+                {% csrf_token %}
+                <h2 class="title">Only for Students of Fr. Conceicao Rodrigues College Of Engineering</h2>
+                <p>Enter your Details to be registered for the event: {{event_name}}</p>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Full Name">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-list-ol"></i>
+                    <input type="number" name="rollno" min="1000" max="9999" placeholder="Roll No">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <input list="class" name="class" placeholder="Class">
+                    <datalist id="class">
+                        <option value="SE COMPS A">
+                        <option value="SE COMPS B">
+                        <option value="SE ECS">
+                        <option value="SE MECH">
+                        <option value="SE PROD">
+                        <option value="TE COMPS">
+                        <option value="TE IT">
+                        <option value="TE ELEX">
+                        <option value="TE PROD">
+                        <option value="BE COMPS">
+                        <option value="BE IT">
+                        <option value="BE ELEX">
+                        <option value="BE PROD">
+                    </datalist>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                </div>
+                <div class="input-field">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" name="email" placeholder="E-mail ID">
+                </div>
+                <input name="event_id" type="hidden" value={{event_id}}>
+                <input type="submit" value="Register" class="btn">
+            </form>
+
+            <form action="{% url 'inter_register' %}" method="post" class="sign-up-form">
+                {% csrf_token %}
+                <h2 class="title">For Students from other Colleges</h2>
+                <p>Enter your Details to be registered for the event: {{event_name}}</p>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Full Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-list-ol"></i>
+                        <input type="text" name="college_name" placeholder="College Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="input-field">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" name="email" placeholder="E-mail ID">
+                    </div>
+                    <input name="event_id" type="hidden" value={{event_id}}>
+                <input type="submit" value="Register" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Not a Student of Fr. CRCE?</h3>
+                <h4>Click here to register as a Student of another college.</h4>
+                <button class="btn transparent" id="sign-up-btn">Other Students</button>
+            </div>
+            <img src="{% static 'webapp/assets/images/pic1.svg' %}" class="image" alt="Sign Up Image">
+        </div>
+
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Student of Fr. CRCE?</h3>
+                <h4>Click here to register as a Student of our college.</h4>
+                <button class="btn transparent" id="sign-in-btn">FR. CRCE Students</button>
+            </div>
+            <img src="{% static 'webapp/assets/images/pic2.svg' %}" class="image" alt="Sign Up Image">
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container")
+
+    sign_up_btn.addEventListener('click', () => {
+        container.classList.add("sign-up-mode");
+    });
+
+    sign_in_btn.addEventListener('click', () => {
+        container.classList.remove("sign-up-mode");
+    });
+
+</script>
+{% endblock %}

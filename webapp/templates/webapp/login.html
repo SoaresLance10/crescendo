@@ -1,0 +1,41 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+<img src="{% static 'webapp/assets/images/wave.png' %}" alt="Background" class="wave">
+<div class="login-container">
+    <div class="img-login">
+        <img src="{% static 'webapp/assets/images/login.svg' %}" alt="Login">
+    </div>
+    <div class="login-container1">
+        <form action="{% url 'login' %}" method="post" id="login">
+            {% csrf_token %}
+            <img src="{% static 'webapp/assets/images/profile.svg' %}" alt="Profile Pic" class="profile">
+            <h2>Enter Credentials</h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <h5>Username</h5>
+                    <input type="text" class="input" placeholder="Username" name="username">
+                </div>
+            </div>
+            <div class="input-div two">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <h5>Password</h5>
+                    <input type="password" class="input" placeholder="Password" name="pw">
+                </div>
+            </div>
+            <input type="submit" class="btn" value="Login">
+        </form>
+    </div>
+</div>
+
+<script>
+
+</script>
+{% endblock %}

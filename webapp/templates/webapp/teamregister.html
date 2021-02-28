@@ -1,0 +1,75 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+<form action="{% url 'register' event_id=event_id %}" method="post" class="sign-in-form">
+    {% csrf_token %}
+    <h2 class="team-title">Register your team for:<br>{{event_name}}</h2>
+    <div class="input-field">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <input list="class" name="class" placeholder="Class" required>
+        <datalist id="class">
+            <option value="SE COMPS A">
+            <option value="SE COMPS B">
+            <option value="SE ECS">
+            <option value="SE MECH">
+            <option value="SE PROD">
+            <option value="TE COMPS">
+            <option value="TE IT">
+            <option value="TE ELEX">
+            <option value="TE PROD">
+            <option value="BE COMPS">
+            <option value="BE IT">
+            <option value="BE ELEX">
+            <option value="BE PROD">
+        </datalist>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" name="p1_name" placeholder="Leader Name" required>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-list-ol"></i>
+        <input type="number" name="p1_rollno" min="1000" max="9999" placeholder="Leader Roll No" required>
+    </div>
+    {% if team == 2 %}
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="p2_name" placeholder="Member 1 Name" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-list-ol"></i>
+            <input type="number" name="p2_rollno" min="1000" max="9999" placeholder="Member 1 Roll No "required>
+        </div>
+        <input type="hidden" name="p3_name" value="empty">
+        {% if team == 3 %}
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="p2_name" placeholder="Member 1 Name" required>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-list-ol"></i>
+                <input type="number" name="p2_rollno" min="1000" max="9999" placeholder="Member 1 Roll No "required>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="p3_name" placeholder="Member 2 Name" required>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-list-ol"></i>
+                <input type="number" name="p3_rollno" min="1000" max="9999" placeholder="Member 2 Roll No" required>
+            </div>
+        {% endif %}
+    {% endif %}
+    <div class="input-field">
+        <i class="fas fa-phone"></i>
+        <input type="tel" name="phone" placeholder="Leader Phone No" required>
+    </div>
+    <div class="input-field">
+        <i class="far fa-envelope"></i>
+        <input type="email" name="email" placeholder="Leader E-mail ID" required>
+    </div>
+    <input name="event_id" type="hidden" value={{event_id}}>
+    <input type="submit" value="Register" class="btn">
+</form>
+{% endblock %}

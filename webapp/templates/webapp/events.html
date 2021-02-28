@@ -1,0 +1,32 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+{% for council, eves in events.items %}
+
+<h1 class="event-head">Events by {{council}}</h1>
+{% if eves.count == 0 %}
+    <h2 class="no-reg">No Events Released yet...</h2>
+{% else %}
+<div class="event-container">
+    {% for eve in eves %}
+    <div class="event-box">
+        <div class="event-imgBox">
+            <img src="{{eve.img}}" alt="Event Image" class="event-img">
+            <h2>{{eve.name}}</h2>
+        </div>
+        <div class="event-details">
+            <div class="event-content">
+                <h2>{{eve.name}}</h2>
+                <p>{{eve.desc}}</p><br>
+                <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
+                <br>
+            </div>
+        </div> 
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endfor %}
+<br><br><p></p>
+{% endblock %}

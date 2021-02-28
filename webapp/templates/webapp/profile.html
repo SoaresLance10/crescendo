@@ -1,0 +1,72 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+<div class="profile">
+    <section class="pro-left">
+        <article class="pro-side-bar-item">
+            <h2 class="parti-name">{{council.name}}</h2>
+        </article>
+        <article class="pro-side-bar-item">
+            <center><img src="{% static 'webapp/assets/images/profile.svg' %}" class="profile-image" alt="Profile Image"></center>
+        </article>
+        <article class="pro-side-bar-item">
+            <h2 class="det-head">Council Details</h2>
+            <div>
+                <p class="dets"><span class="det-h">Council Code:</span><span class=det>{{council.username}}</span></p>
+                <p class="dets"><span class="det-h">Council Name:</span><span class=det>{{council.name}}</span></p>
+                <p class="dets"><span class="det-h">No of Events:</span><span class=det>{{event.count}}</span></p>
+            </div>
+            </article>
+    </section>
+    <section class="pro-right">
+        <article class="post">
+            <h1 class="profile-title">Events</h1>
+            <table class="profile-table">
+                <tr id="table-head">
+                    <th>Event ID</th>
+                    <th>Event Name</th>
+                    <th>No of Registrations</th>
+                </tr>
+                {% for eve in event %}
+                <tr>
+                    <td>{{eve.event_id}}</td>
+                    <td>{{eve.name}}</td>
+                    <td>{{eve.total_reg}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </article>
+        <article class="post">
+            <h1 class="profile-title">Registrations</h1>
+            {% for eve, parti in all_parti.items %}
+            
+            <table class="profile-table">
+                <h2 class="event-title">{{eve.name}}</h2>
+                {% if parti.count == 0 %}
+                    <h2 class="no-reg">No registrations yet..</h2>
+                {% else %}
+                    <tr id="table-head">
+                        <th>Participant ID</th>
+                        <th>Participant Name</th>
+                        <th>Phone Number</th>
+                        <th>Email ID</th>
+                    </tr>
+                    {% for par in parti%}
+                        <tr>
+                            <td>{{par.p_id}}</td>
+                            <td>{{par.p_name}}</td>
+                            <td>{{par.phone}}</td>
+                            <td>{{par.email}}</td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </table>
+            {% endfor %}
+            <p> </p><br>
+            <p> </p><br>
+            <p> </p><br>
+        </article>
+    </section>
+</div>
+{% endblock %}

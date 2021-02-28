@@ -1,0 +1,63 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+<main>
+    <section class="site-title">
+        <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+            <h3>Fr. CRCE Students Council presents</h3>
+            <h1>Crescendo 2k21</h1>
+            <button class="btn"><a href='{% url 'events' %}'>Explore Our Events</a></button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo">
+                <center><img src="{% static 'webapp/assets/images/logo.png' %}" alt="Students Council Fr. CRCE" width=200px></center>
+                <center><img src="{% static 'webapp/assets/images/college_logo.png' %}" alt="Students Council Fr. CRCE" width=250px style="margin-top: 30px;"</center>
+            </div>
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>The raison d’etre of the Students' Council is to be a formal communication channel between the students, 
+                    faculties and the administration. While it seeks to address any queries and resolve issues that the students 
+                    and / or admin may face, the Student Council also relentlessly strives towards the enrichment of the campus 
+                    experience.<br><br>
+                    As a team, we are 21 players with one heartbeat who take pride in being the voice and strength of a community 
+                    of 1000+ students. We don't look for a reason to help others. We work for a cause, not for applause.
+                </p>
+            </div>
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <p>For any queries or information reach out to us on Instagram or via Email.</p>
+                <div class="contact-icon">
+                    <a href="https://www.facebook.com/fcrce/" target="blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/frcrce_official" target="blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:studentscouncilfrcrce@gmail.com"><i class="fab fa fa-envelope"></i></a>
+                    <a href="tel:9167293111"><i class="fab fa fa-phone-square"></i></a>
+                </div>
+            </div>
+            <div class="insta">
+                <h2><a href="https://www.instagram.com/frcrce_official" target="blank">Instagram</a></h2>
+                <div class="flex-row">
+                    <img src="{% static 'webapp/assets/images/insta/insta1.png' %}" alt="Insta1">
+                    <img src="{% static 'webapp/assets/images/insta/insta2.png' %}" alt="Insta2">
+                    <img src="{% static 'webapp/assets/images/insta/insta3.png' %}" alt="Insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="{% static 'webapp/assets/images/insta/insta4.png' %}" alt="Insta4">
+                    <img src="{% static 'webapp/assets/images/insta/insta5.png' %}" alt="Insta5">
+                    <img src="{% static 'webapp/assets/images/insta/insta6.png' %}" alt="Insta6">
+                </div>
+            </div>
+        </div>
+        <div class="rights">
+            <h4>
+                Copyright ©2021  | Desinged and developed by<br>Lance Soares
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+</main>
+{% endblock %}

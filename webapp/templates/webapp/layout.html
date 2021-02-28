@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cresendo 2k21">
+    <meta name="author" content="Lance Soares">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crescendo 2k21: {{title}}</title>
+
+    <!-- Custom Style   -->
+    <link href="{% static 'webApp/css/style.css' %}" rel="stylesheet">
+
+    <!--Font Awesome -->
+    <link href="{% static 'webapp/css/all.css' %}" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+    <!-- Title Icon-->
+
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href=# class="text-grey">Crescendo</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    {% if user.is_authenticated %}
+                    <li class="nav-link">
+                        <a href='{% url 'index' %}'>Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'profile' username=user.username %}'>Profile</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'logout' %}'>Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-link">
+                        <a href='{% url 'index' %}'>Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'events' %}'>Events</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'standings' %}'>Standings</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'login' %}'>Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="social text-grey">
+                <a href="https://www.facebook.com/fcrce/" target="blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/frcrce_official" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:studentscouncilfrcrce@gmail.com"><i class="fab fa fa-envelope"></i></a>
+                <a href="tel:9167293111"><i class="fab fa fa-phone-square"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!--Nav Bar End-->
+    <h2 class="top_message">{% if top_message %}{{ top_message }}{% endif %}</h2>
+    {% block main %}
+    {% endblock %}
+
+    <!-- JQuery File-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function () {
+
+            $nav = $('.nav');
+            $toggleCollapse = $('.toggle-collapse');
+
+            /** click event on toggle menu */
+            $toggleCollapse.click(function () {
+                $nav.toggleClass('collapse');
+            })
+
+            // click to scroll top
+            $('.move-up span').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            })
+        });
+    </script>
+
+</body>

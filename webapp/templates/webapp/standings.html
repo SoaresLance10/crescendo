@@ -1,0 +1,21 @@
+{% extends "WebApp/layout.html" %}
+{% load static %}
+
+{% block main %}
+        <h1 class="profile-title">Crescendo 2k21 Scores</h1>
+            <table class="profile-table">
+                <tr id="table-head">
+                    <th>Position</th>
+                    <th>Class Name</th>
+                    <th>Total Points</th>
+                </tr>
+                {% for score in scores %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{score.class_name}}</td>
+                    <td>{{score.score}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <p></p>
+{% endblock %}
