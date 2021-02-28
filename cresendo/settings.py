@@ -25,7 +25,7 @@ SECRET_KEY = 'homup*!^m-+(i=4)^u+3$vxh%nc)ml$kh06^-8zj2j+m0uf2-8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["crescendo2021.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
