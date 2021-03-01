@@ -63,7 +63,7 @@ class Registration(models.Model):
         return f"Participant ID:{self.p_id} Name:{self.p_name} Event ID:{self.event_id} Council ID: {self.council_id}"
 
 class TeamRegistration(models.Model):
-    team_id = models.AutoField(primary_key=True)
+    team_no = models.IntegerField(default=1)
     p1_id = models.IntegerField()
     p2_id = models.IntegerField(blank=True, null=True)
     p3_id = models.IntegerField(blank=True, null=True)

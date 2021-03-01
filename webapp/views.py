@@ -121,8 +121,8 @@ def register(request, event_id):
             regs = Registration.objects.filter(event_id=event_id)
             class_regs = 0
             for reg in regs:
-                if TeamRegistration.objects.filter(team_id = reg.p_id):
-                    team = TeamRegistration.objects.filter(team_id = reg.p_id)[0]
+                if TeamRegistration.objects.filter(team_no = reg.p_id):
+                    team = TeamRegistration.objects.filter(team_no = reg.p_id)[0]
                 else:
                     team = False
                 if team:
@@ -140,6 +140,12 @@ def register(request, event_id):
 
             parti.save()
 
+            if TeamRegistration.objects.all().order_by('-team_no'):
+                last_team = TeamRegistration.objects.all().order_by('-team_no')[0].team_no
+            else:
+                last_team = 0
+
+            team_reg.team_no = last_team + 1
             team_reg.p1_id = request.POST['p1_rollno']
             team_reg.p1_name = request.POST['p1_name']
             team_reg.class_name = request.POST['class']
@@ -162,7 +168,7 @@ def register(request, event_id):
 
             team = TeamRegistration.objects.filter(class_name = request.POST['class'], p1_id = request.POST['p1_rollno'], p2_name = request.POST['p2_name'])[0]
 
-            register.p_id = team.team_id
+            register.p_id = team.team_no
             register.p_name = f"{team.class_name}: {team.p1_name} {team.p2_name} {team.p3_name}"
             register.event_id = event_id
             register.council_id = Event.objects.filter(event_id=event_id)[0].council_id

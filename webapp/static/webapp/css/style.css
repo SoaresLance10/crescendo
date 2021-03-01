@@ -785,7 +785,6 @@ main .site-title .btn:hover{
   margin: 10px auto;
   box-sizing: border-box;
   display: inline-block;
-
 }
 @media (max-width: 1200px)  {
   .event-container .event-box {
