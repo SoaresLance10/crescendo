@@ -527,7 +527,7 @@ main .site-title .btn:hover{
     width: 100%;
     background-color: #07656e;
     color: var(--white);
-    animation: hide 3s;
+    animation: hide 6s;
   }
   @keyframes hide{
     0% {height: 0px; font-size: 0;}
