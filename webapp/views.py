@@ -85,7 +85,7 @@ def register(request, event_id):
                         class_regs += 1
                         
             if class_regs >= cap:
-                return render(request, "webapp/register.html", {"title": "Register", "event_name": event_name, "event_id": event_id, "top_message": "Max Participants from class already Registered"})
+                return render(request, "webapp/register.html", {"title": "Register", "event_name": event_name, "event_id": event_id, "top_message": "Max Participants from class Registered"})
 
             parti.name = request.POST['name']
             parti.roll_no = request.POST['rollno']
@@ -130,7 +130,7 @@ def register(request, event_id):
                         class_regs += 1
                         
             if class_regs >= cap:
-                 return render(request, "webapp/teamregister.html", {"title": "Team Registration", "event_name": event_name, "event_id": event_id, "team": team_no, "top_message": "Max Teams from class already Registered"})
+                 return render(request, "webapp/teamregister.html", {"title": "Team Registration", "event_name": event_name, "event_id": event_id, "team": team_no, "top_message": "Max Teams from class Registered"})
 
             parti.name = request.POST['p1_name']
             parti.roll_no = request.POST['p1_rollno']
