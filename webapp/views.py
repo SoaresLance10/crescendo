@@ -132,8 +132,8 @@ def register(request, event_id):
             if class_regs >= cap:
                  return render(request, "webapp/teamregister.html", {"title": "Team Registration", "event_name": event_name, "event_id": event_id, "team": team_no, "top_message": "Max Teams from class Registered"})
 
-            parti.name = request.POST['p1_name'] + 1000000
-            parti.roll_no = request.POST['p1_rollno']
+            parti.name = request.POST['p1_name'] 
+            parti.roll_no = request.POST['p1_rollno'] + 1000000
             parti.class_name = request.POST['class']
             parti.phone = request.POST['phone']
             parti.email = request.POST['email']
