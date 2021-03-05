@@ -4,15 +4,13 @@
 {% block main %}
     <div 
 	class="apply-button" 
-	data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+	data-hackathon-slug="crescendo-hackathon" 
 	data-button-theme="dark"
 	style="height: 44px; width: 312px"
     ></div>
 
-    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-
     <main>
-        <section class="site-title">
+        <section class="hackathon">
             <center><img src="{% static 'webapp/assets/images/hackathon.png' %}" alt="" width="80%"></center>
         </section>
         <footer class="footer">
@@ -27,4 +25,5 @@
         </footer>
     </main>
 
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
 {% endblock %}
