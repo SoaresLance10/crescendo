@@ -41,6 +41,12 @@ a {
 ul {
     list-style-type: none;
 }
+
+.apply-button {
+  align-self: center;
+  padding: 20px 20px;
+  border: 2px solid var(--midnight);
+}
 /* Global Classes End */
 
 /* Nav Bar */
@@ -982,3 +988,4 @@ main .site-title .btn:hover{
   }
 }
 /* Footer End */
+
