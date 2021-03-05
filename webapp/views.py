@@ -242,3 +242,6 @@ def profile(request, username):
 def standings(request):
     scores = Score.objects.all().order_by('-score')
     return render(request, "webapp/standings.html", {"title": "Standings", "top_message": "Scores may not be up to date", "scores": scores})
+
+def hackathon(request):
+    return render(request, "webapp/hackathon.html", {"title": "Hackathon"})

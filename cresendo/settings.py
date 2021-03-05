@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'homup*!^m-+(i=4)^u+3$vxh%nc)ml$kh06^-8zj2j+m0uf2-8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["crescendo2021.herokuapp.com", "127.0.0.1"]
 

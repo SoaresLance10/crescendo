@@ -1,0 +1,14 @@
+{% extends "webapp/layout.html" %}
+{% load static %}
+
+{% block main %}
+    <div 
+	class="apply-button" 
+	data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+	data-button-theme="dark"
+	style="height: 44px; width: 312px"
+    ></div>
+
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+
+{% endblock %}

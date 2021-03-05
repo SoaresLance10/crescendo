@@ -19,7 +19,11 @@
             <div class="event-content">
                 <h2>{{eve.name}}</h2>
                 <p>{{eve.desc}}</p><br>
-                <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
+                {% if eve.event_id == 4 %}
+                <a href='{% url 'hackthon' %}'>Register</a>
+                {% else %}
+                    <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
+                {% endif %}
                 <br>
             </div>
         </div> 

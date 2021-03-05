@@ -10,5 +10,6 @@ urlpatterns = [
     path('standings', views.standings, name="standings"),
     path('register/<event_id>', views.register, name="register"),
     path('inter_register', views.inter_register, name="inter_register"),
+    path('hackathon', views.hackathon, name="hackathon"),
     path('profile/<username>', views.profile, name="profile")
 ]
