@@ -244,4 +244,4 @@ def standings(request):
     return render(request, "webapp/standings.html", {"title": "Standings", "top_message": "Scores may not be up to date", "scores": scores})
 
 def hackathon(request):
-    return render(request, "webapp/hackathon.html", {"title": "Hackathon"})
+    return render(request, "webapp/hackathon.html", {"title": "Hackathon", "top_message": "Crescendo Hackathon 2k21"})
