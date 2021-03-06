@@ -3,15 +3,28 @@
 
 {% block main %}
     <main>
-        <section class="hackathon">
-            <center><img src="{% static 'webapp/assets/images/hackathon.png' %}" alt="" width="80%"></center>
-            <div 
+        <div class="hackthon-content">
+            <div class="hackathon">
+                <div class="hackathon-img">
+                    <img src="{% static 'webapp/assets/images/hackathon.png' %}" alt="Crescendo Hackathon">
+                </div>
+                <div class="hackathon-info">
+                    <div class="hackathon-date">
+                        <span>Saturday-Sunday</span>
+                        <span>20-21 March 2021</span>
+                    </div>
+                    <h1 class="hackathon-title">Crescendo Hackathon</h1>
+                    <p class="hackathon-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quas nisi et architecto quis, quisquam voluptatem fugiat voluptatibus perferendis iste.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div 
             class="apply-button" 
             data-hackathon-slug="crescendo-hackathon" 
             data-button-theme="dark"
             style="height: 44px; width: 312px"
             ></div>
-        </section>
         <footer class="footer" style="background-color: white;">
             <div class="footer-container">
                 <div class="logo">
