@@ -1048,6 +1048,15 @@ main .site-title .btn:hover{
   font-size: 1.4rem;
 }
 
+.register {
+  font-family: var(--Abel);
+  font-weight: 900;
+  color: var(--midnight);
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 900px) {
   .hack-card {
     display: flex;
