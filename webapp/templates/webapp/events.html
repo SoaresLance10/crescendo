@@ -22,12 +22,11 @@
                 {% if eve.event_id == 4 %}
                 <a href='{% url 'hackathon' %}'>Register</a>
                 {% else %}
-                    <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
-                {% endif %}
-                {% if eve.event_id == 5 %}
-                <a href='{% url 'mechathon' %}'>Register</a>
-                {% else %}
-                    <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
+                    {% if eve.event_id == 5 %}
+                    <a href='{% url 'mechathon' %}'>Register</a>
+                    {% else %}
+                        <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
+                    {% endif %}
                 {% endif %}
                 <br>
             </div>
