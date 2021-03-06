@@ -991,4 +991,14 @@ main .site-title .btn:hover{
 
 /*Hackathon Page */
 
+.hackathon-container {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.hack-card {
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  
+}
 /*Hackathon Page End */
