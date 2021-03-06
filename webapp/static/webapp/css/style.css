@@ -1012,4 +1012,22 @@ main .site-title .btn:hover{
   object-fit: cover;
   display: block;
 }
+
+.card-content {
+  padding: 2rem;
+}
+
+.hack-details , .icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text {
+  margin-right: 1rem;
+}
+
+.icon-text .icon {
+  color: var(--midnight);
+  margin-right: 0.4rem;
+}
 /*Hackathon Page End */
