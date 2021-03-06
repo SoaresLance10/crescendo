@@ -3,18 +3,23 @@
 
 {% block main %}
     <main>
-        <div class="hackthon-content">
-            <div class="hackathon">
-                <div class="hackathon-img">
-                    <img src="{% static 'webapp/assets/images/hackathon.png' %}" alt="Crescendo Hackathon" width="100%">
+        <div class="hack-container">
+            <div class="hack-card">
+                <div class="card-image">
+                    <img src="{% static 'webapp/assets/images/hackathon.png' %}" alt="Hackathon image">
                 </div>
-                <div class="hackathon-info">
-                    <div class="hackathon-date">
-                        <span>Saturday-Sunday</span>
-                        <span>20-21 March 2021</span>
+                <div class="card-content">
+                    <div class="hack-details">
+                        <div class="icon-text">
+                            <span class="icon">
+                                <i class="fab fa fa-calendar"></i>
+                            </span>
+                            <span class="text">
+                                20-21 March 2021
+                            </span>
+                        </div>
                     </div>
-                    <h1 class="hackathon-title">Crescendo Hackathon</h1>
-                    <p class="hackathon-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quas nisi et architecto quis, quisquam voluptatem fugiat voluptatibus perferendis iste.</p>
+                    <h2 class="hack-title">Crescendo Hackathon</h2>
                 </div>
             </div>
         </div>
