@@ -1048,6 +1048,12 @@ main .site-title .btn:hover{
   font-size: 1.4rem;
 }
 
+.excerpt .more-details {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--midnight);
+}
+
 .register {
   font-family: var(--Abel);
   font-weight: 900;
