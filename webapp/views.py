@@ -245,3 +245,6 @@ def standings(request):
 
 def hackathon(request):
     return render(request, "webapp/hackathon.html", {"title": "Hackathon", "top_message": "Crescendo Hackathon 2k21"})
+
+def mechathon(request):
+    return render(request, "webapp/mechathon.html", {"title": "Mechathon", "top_message": "Crescendo Mechathon 2k21"})

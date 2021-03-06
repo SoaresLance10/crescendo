@@ -11,5 +11,6 @@ urlpatterns = [
     path('register/<event_id>', views.register, name="register"),
     path('inter_register', views.inter_register, name="inter_register"),
     path('hackathon', views.hackathon, name="hackathon"),
+    path('mechathon', views.mechathon, name="mechathon"),
     path('profile/<username>', views.profile, name="profile")
 ]
