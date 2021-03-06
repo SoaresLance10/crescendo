@@ -1039,17 +1039,17 @@ main .site-title .btn:hover{
 
 .hack-title {
   font-family: var(--Abel);
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--midnight);
 }
 
 .excerpt {
   font-family: var(--Josefin);
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .more-details span{
-  font-size: 1.2rem;
+  font-size: .8rem;
   font-weight: 900;
   font-family: var(--Abel);
   color: var(--midnight);
