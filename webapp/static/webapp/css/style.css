@@ -1045,11 +1045,11 @@ main .site-title .btn:hover{
 
 .excerpt {
   font-family: var(--Josefin);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .more-details span{
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 900;
   font-family: var(--Abel);
   color: var(--midnight);
@@ -1065,7 +1065,7 @@ main .site-title .btn:hover{
   text-align: center;
   font-size: 2rem;
   width: 300px;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 900px) {
