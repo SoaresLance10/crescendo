@@ -1048,9 +1048,10 @@ main .site-title .btn:hover{
   font-size: 1.4rem;
 }
 
-.excerpt .more-details {
+.excerpt .more-details span{
   font-size: 1.2rem;
   font-weight: 900;
+  font-family: var(--Abel);
   color: var(--midnight);
 }
 
