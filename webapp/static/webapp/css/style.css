@@ -1051,8 +1051,8 @@ main .site-title .btn:hover{
 .register {
   font-family: var(--Abel);
   font-weight: 900;
-  color: var(--midnight);
-  background-color: white;
+  color: white;
+  background-color:var(--midnight);
   padding: 5px 10px;
   border-radius: 10px;
 }
