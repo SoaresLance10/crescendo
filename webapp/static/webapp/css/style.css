@@ -1048,7 +1048,7 @@ main .site-title .btn:hover{
   font-size: 1.4rem;
 }
 
-.excerpt .more-details span{
+.more-details span{
   font-size: 1.2rem;
   font-weight: 900;
   font-family: var(--Abel);
@@ -1065,7 +1065,7 @@ main .site-title .btn:hover{
   text-align: center;
   font-size: 2rem;
   width: 300px;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 @media screen and (min-width: 900px) {
