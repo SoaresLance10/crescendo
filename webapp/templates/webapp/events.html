@@ -20,13 +20,15 @@
                 <h2>{{eve.name}}</h2>
                 <p>{{eve.desc}}</p><br>
                 {% if eve.event_id == 4 %}
-                <a href='{% url 'hackathon' %}'>Register</a>
-                {% else %}
-                    {% if eve.event_id == 5 %}
+                    <a href='{% url 'hackathon' %}'>Register</a>
+                {% elif eve.event_id == 5 %}
                     <a href='{% url 'mechathon' %}'>Register</a>
-                    {% else %}
-                        <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
-                    {% endif %}
+                {% elif eve.event_id == 6 %}
+                    <a href='{% url 'valorant' %}'>Register</a>
+                {% elif eve.event_id == 7 %}
+                    <a href='{% url 'cod' %}'>Register</a>
+                {% else %}
+                    <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
                 {% endif %}
                 <br>
             </div>
