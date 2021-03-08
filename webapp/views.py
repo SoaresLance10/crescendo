@@ -226,14 +226,14 @@ def events(request):
     events = {}
     councils = Council.objects.all()
     for council in councils:
-        events[council.name]=Event.objects.filter(council_id=council.council_id)
+        events[council.name]=Event.objects.filter(council_id=council.council_id).order_by('event_id')
     return render(request, "webapp/events.html", {"top_message": message, "title": "Events", "events": events, "councils": councils})
 
 @login_required(login_url='login')
 def profile(request, username):
     council=Council.objects.get(username=username)
     all_parti = {}
-    event=Event.objects.filter(council_id=council.council_id).order_by('event_id')
+    event=Event.objects.all().filter(council_id=council.council_id)
     for eve in event:
         all_parti[eve] = Registration.objects.filter(event_id=eve.event_id)
 
