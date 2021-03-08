@@ -26,11 +26,21 @@
                 </p>
                 <br>
                 <p class="more-details">
-                    <span>Cash Prize for Winners: &#8377; 5,500/-</span><br>
-                    <span>Registration Fee: &#8377; 100/- Per Team</span><br>
+                    {% if id == 7 %}
+                        <span>Cash Prize for Winners: &#8377; 5,500/-</span><br>
+                        <span>Registration Fee: &#8377; 100/- Per Team</span><br>
+                    {% else %}
+                        <span>Cash Prize for Winners: &#8377; 2,500/-</span><br>
+                        <span>1 Team allowed Per Class</span><br>
+                        <span>All Team Members must be from the same Class</span><br>
+                    {% endif %}
                     <span>4 Members Per Team plus 1 Substitute</span>
                 </p>
-                <a href="#" class="register">Register</a>
+                {% if id == 7 %}
+                    <a href="#" class="register" target="black">Register</a>
+                {% else %}
+                    <a href="https://www.google.com/" class="register" target="black">Register</a>
+                {% endif %}
             </div>
         </div>
     </div>
