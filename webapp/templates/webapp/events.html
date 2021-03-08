@@ -4,7 +4,7 @@
 {% block main %}
 {% for council, eves in events.items %}
 
-<h1 class="event-head">Events by {{council}}</h1>
+<h1 class="event-head">{{council}} Events</h1>
 {% if eves.count == 0 %}
     <h2 class="no-reg">No Events Released yet...</h2>
 {% else %}
