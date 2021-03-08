@@ -788,7 +788,7 @@ main .site-title .btn:hover{
   position: relative;
   width: 300px;
   height: 300px;
-  margin: 10px auto 10px 5%;
+  margin: 10px 8% 10px 8%;
   box-sizing: border-box;
   display: inline-block;
 }
