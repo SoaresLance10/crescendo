@@ -786,8 +786,8 @@ main .site-title .btn:hover{
 }
 .event-container .event-box {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 330px;
+  height: 330px;
   margin: 10px auto;
   box-sizing: border-box;
   display: inline-block;
