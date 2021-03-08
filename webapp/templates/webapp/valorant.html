@@ -15,7 +15,11 @@
                             <i class="fab fa fa-calendar"></i>
                         </span>
                         <span class="text">
-                            13th, 16th March 2021
+                            {% if id == 6 %}
+                                13th March 2021
+                            {% else %}
+                                15th, 16th March 2021
+                            {% endif %}
                         </span>
                     </div>
                 </div>
