@@ -233,7 +233,7 @@ def events(request):
 def profile(request, username):
     council=Council.objects.get(username=username)
     all_parti = {}
-    event=Event.objects.all().filter(council_id=council.council_id).order_by('event_id')
+    event=Event.objects.filter(council_id=council.council_id).order_by('event_id')
     for eve in event:
         all_parti[eve] = Registration.objects.filter(event_id=eve.event_id)
 
