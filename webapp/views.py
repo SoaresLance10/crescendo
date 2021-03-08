@@ -250,7 +250,9 @@ def mechathon(request):
     return render(request, "webapp/mechathon.html", {"title": "Mechathon", "top_message": "Crescendo Mechathon 2k21"})
 
 def valorant(request, id):
-    return render(request, "webapp/valorant.html", {"title": "Valorant", "top_message": "E-Sports Valorant", "id": id})
+    i=int(id)
+    return render(request, "webapp/valorant.html", {"title": "Valorant", "top_message": "E-Sports Valorant", "id": i})
 
 def cod(request, id):
-    return render(request, "webapp/cod.html", {"title": "Call Of Duty", "top_message": "E-Sports Call of Duty Mobile", "id": id})
+    i=int(id)
+    return render(request, "webapp/cod.html", {"title": "Call Of Duty", "top_message": "E-Sports Call of Duty Mobile", "id": i})
