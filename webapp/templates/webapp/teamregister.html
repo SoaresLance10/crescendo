@@ -42,24 +42,23 @@
             <input type="number" name="p2_rollno" min="1000" max="9999" placeholder="Member 1 Roll No "required>
         </div>
         <input type="hidden" name="p3_name" value="empty">
-        {% if team == 3 %}
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="p2_name" placeholder="Member 1 Name" required>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-list-ol"></i>
-                <input type="number" name="p2_rollno" min="1000" max="9999" placeholder="Member 1 Roll No "required>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="p3_name" placeholder="Member 2 Name" required>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-list-ol"></i>
-                <input type="number" name="p3_rollno" min="1000" max="9999" placeholder="Member 2 Roll No" required>
-            </div>
-        {% endif %}
+    {% elif team == 3 %}
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="p2_name" placeholder="Member 1 Name" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-list-ol"></i>
+            <input type="number" name="p2_rollno" min="1000" max="9999" placeholder="Member 1 Roll No "required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="p3_name" placeholder="Member 2 Name" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-list-ol"></i>
+            <input type="number" name="p3_rollno" min="1000" max="9999" placeholder="Member 2 Roll No" required>
+        </div>
     {% endif %}
     <div class="input-field">
         <i class="fas fa-phone"></i>
