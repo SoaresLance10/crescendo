@@ -12,7 +12,7 @@ urlpatterns = [
     path('inter_register', views.inter_register, name="inter_register"),
     path('hackathon', views.hackathon, name="hackathon"),
     path('mechathon', views.mechathon, name="mechathon"),
-    path('valorant', views.valorant, name="valorant"),
-    path('cod', views.cod, name="cod"),
+    path('valorant/<id>', views.valorant, name="valorant"),
+    path('cod/<id>', views.cod, name="cod"),
     path('profile/<username>', views.profile, name="profile")
 ]
