@@ -224,7 +224,7 @@ def inter_register(request):
 def events(request):
     message = "Events of Crescendo 2k21"
     events = {}
-    councils = Council.objects.all().order_by('-council_id')
+    councils = Council.objects.all().order_by('council_id')
     for council in councils:
         events[council.name]=Event.objects.filter(council_id=council.council_id).order_by('event_id')
     return render(request, "webapp/events.html", {"top_message": message, "title": "Events", "events": events, "councils": councils})
