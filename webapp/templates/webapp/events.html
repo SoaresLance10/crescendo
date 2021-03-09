@@ -31,6 +31,10 @@
                     <a href='{% url 'valorant' id=eve.event_id %}' %}'>Register</a>
                 {% elif eve.event_id == 17 %}
                     <a href='{% url 'cod' id=eve.event_id %}' %}'>Register</a>
+                {% elif eve.event_id == 18 %}
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSegrtzJMLQxSx_LnFCFppcNAePJzJKfq5O6ci3RiHO-N9zyPw/viewform?usp=sf_link' %}'>Register</a>
+                {% elif eve.event_id == 19 %}
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSfNZf5M6jXvE3eEofEyPpERgTbP2_A672JEt1UllLWCQawvlw/viewform?usp=sf_link' %}'>Register</a>
                 {% else %}
                     <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
                 {% endif %}
