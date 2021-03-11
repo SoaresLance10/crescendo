@@ -912,7 +912,7 @@ main .site-title .btn:hover{
 .profile-table .day {
   background-color: #197d87;
   color: var(--white);
-  height: 60px;
+  height: 45px;
   font-size: 1.2rem;
   font-family: var(--Lexend);
 }
