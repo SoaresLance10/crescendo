@@ -903,6 +903,11 @@ main .site-title .btn:hover{
   background-color: var(--midnight);
   color: var(--white);
 }
+#table-head-sch {
+  background-color: var(--midnight);
+  color: var(--white);
+  min-height: 30px;
+}
 .profile-table tr:hover {
   color: var(--white);
   font-weight: 900;
