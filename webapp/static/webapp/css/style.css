@@ -906,7 +906,7 @@ main .site-title .btn:hover{
 #table-head-sch {
   background-color: var(--midnight);
   color: var(--white);
-  min-height: 30px;
+  min-height: 70px;
 }
 .profile-table tr:hover {
   color: var(--white);
