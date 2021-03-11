@@ -243,6 +243,9 @@ def standings(request):
     scores = Score.objects.all().order_by('-score')
     return render(request, "webapp/standings.html", {"title": "Standings", "top_message": "Scores may not be up to date", "scores": scores})
 
+def schedule(request):
+    return render(request, "webapp/schedule.html", {"title": "Schedule", "top_message": "Schedule for Crescendo 2k21"})
+
 def hackathon(request):
     return render(request, "webapp/hackathon.html", {"title": "Hackathon", "top_message": "Crescendo Hackathon 2k21"})
 

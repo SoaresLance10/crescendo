@@ -8,6 +8,7 @@ urlpatterns = [
     path('createcouncil', views.create_council, name="createcouncil"),
     path('events', views.events, name="events"),
     path('standings', views.standings, name="standings"),
+    path('schedule', views.schedule, name="schedule"),
     path('register/<event_id>', views.register, name="register"),
     path('inter_register', views.inter_register, name="inter_register"),
     path('hackathon', views.hackathon, name="hackathon"),

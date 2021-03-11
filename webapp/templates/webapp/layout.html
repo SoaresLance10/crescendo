@@ -45,6 +45,9 @@
                         <a href='{% url 'profile' username=user.username %}'>Profile</a>
                     </li>
                     <li class="nav-link">
+                        <a href='{% url 'schedule' %}'>Schedule</a>
+                    </li>
+                    <li class="nav-link">
                         <a href='{% url 'logout' %}'>Logout</a>
                     </li>
                     {% else %}
@@ -56,6 +59,9 @@
                     </li>
                     <li class="nav-link">
                         <a href='{% url 'standings' %}'>Standings</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href='{% url 'schedule' %}'>schedule</a>
                     </li>
                     <li class="nav-link">
                         <a href='{% url 'login' %}'>Login</a>
