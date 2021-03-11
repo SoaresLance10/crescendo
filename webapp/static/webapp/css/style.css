@@ -907,11 +907,13 @@ main .site-title .btn:hover{
   background-color: var(--midnight);
   color: var(--white);
   height: 80px;
+  font-size: 2rem;
 }
 .profile-table .day {
   background-color: #197d87;
   color: var(--white);
-  height: 80px;
+  height: 60px;
+  font-size: 1.6rem;
 }
 .profile-table tr:hover {
   color: var(--white);
