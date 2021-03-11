@@ -906,7 +906,12 @@ main .site-title .btn:hover{
 #table-head-sch {
   background-color: var(--midnight);
   color: var(--white);
-  height: 150px;
+  height: 80px;
+}
+.profile-table .day {
+  background-color: #197d87;
+  color: var(--white);
+  height: 80px;
 }
 .profile-table tr:hover {
   color: var(--white);
