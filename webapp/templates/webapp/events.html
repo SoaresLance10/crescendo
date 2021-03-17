@@ -38,7 +38,7 @@
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSegrtzJMLQxSx_LnFCFppcNAePJzJKfq5O6ci3RiHO-N9zyPw/viewform?usp=sf_link' %}'>Register</a>
                 {% elif eve.event_id == 19 %}
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSfNZf5M6jXvE3eEofEyPpERgTbP2_A672JEt1UllLWCQawvlw/viewform?usp=sf_link' %}'>Register</a>
-                {% elif eve.event_id == 15 or eve.event_id == 13 or eve.event_id == 9 or eve.event_id == 12 %}
+                {% elif eve.event_id == 15 or eve.event_id == 13 or eve.event_id == 9 or eve.event_id == 12 eve.event_id == 14 %}
                     <a href=# %}'>Registrations Closed!</a>
                 {% else %}
                     <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>
