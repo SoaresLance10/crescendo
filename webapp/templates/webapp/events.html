@@ -22,7 +22,8 @@
                 {% if eve.event_id == 4 %}
                     <a href='{% url 'hackathon' %}'>Register</a>
                 {% elif eve.event_id == 5 %}
-                    <a href='{% url 'mechathon' %}'>Register</a>
+                    <a href=# %}'>Registrations Closed!</a>
+                    <!--<a href='{% url 'mechathon' %}'>Register</a>-->
                 {% elif eve.event_id == 6 %}
                     <a href=# %}'>Registrations Closed!</a>
                     <!--<a href='{% url 'valorant' id=eve.event_id %}' %}'>Register</a>-->
@@ -38,7 +39,7 @@
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSegrtzJMLQxSx_LnFCFppcNAePJzJKfq5O6ci3RiHO-N9zyPw/viewform?usp=sf_link' %}'>Register</a>
                 {% elif eve.event_id == 19 %}
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSfNZf5M6jXvE3eEofEyPpERgTbP2_A672JEt1UllLWCQawvlw/viewform?usp=sf_link' %}'>Register</a>
-                {% elif eve.event_id == 15 or eve.event_id == 13 or eve.event_id == 9 or eve.event_id == 12 or eve.event_id == 14  or eve.event_id == 8  or eve.event_id == 10   or eve.event_id == 11 %}
+                {% elif eve.event_id == 15 or eve.event_id == 13 or eve.event_id == 9 or eve.event_id == 12 or eve.event_id == 14 or eve.event_id == 8 or eve.event_id == 10 or eve.event_id == 11 or eve.event_id == 17 or eve.event_id == 18 %}
                     <a href=# %}'>Registrations Closed!</a>
                 {% else %}
                     <a href='{% url 'register' event_id=eve.event_id %}'>Register</a>

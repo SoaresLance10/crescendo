@@ -63,7 +63,7 @@ def create_council(request):
         return redirect('createcouncil')
 
     else:
-        return render(request, "webapp/createcouncil.html",{"title": "Create Council"})
+        return HttpResponseRedirect(reverse("index"))
 
 def register(request, event_id):
     if request.method=="POST":
